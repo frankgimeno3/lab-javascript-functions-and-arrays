@@ -37,7 +37,6 @@ const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 function sumNumbers(numbers) {
   let finalsum = 0;
-  let allZero = true;
     if (numbers.length == 0){
       return finalsum;
     }
@@ -56,7 +55,18 @@ function sumNumbers(numbers) {
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum(numbers) {
+  let finalsum = 0;
+  if (numbers.length == 0){
+    return 0;
+  }
+  else{
+    for (i=0; i<numbers.length; i++){
+      finalsum += numbers[i];
+    }
+    return finalsum; 
+  }
+}
 
 
 
@@ -92,14 +102,16 @@ function averageWordLength(wordsArr) {
     sumArr = sumArr + wordsArr[i];
   }
   if(wordsArr.length == 0){return null;}
-  else if(wordsArr.length == 1){return wordsArr[0].length;}
   else {
     average=sumArr.length/wordsArr.length;
     return average;}
  }
 
 // Bonus - Iteration #4.1
-function avg() {}
+function avg() {
+  if(wordsArr.length ==0){return null}
+  else{return}
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [

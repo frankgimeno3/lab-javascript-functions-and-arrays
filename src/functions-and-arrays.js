@@ -1,19 +1,57 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(number1, number2) {
+  if(number1>number2){
+    return number1;
+  }
+    else if(number1<number2){
+      return number2;
+    }
+    else{
+      return number1, number2;
+    }
+}
 
 
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+function findLongestWord(words) {
+  let longestword = "";
+    if(words.length == 0 ){return null;}    //ok
+    else{
+      if(words.length == 1){return words[0];}   //ok
+    }
 
-
+  for(i=0; i<words.length;i++){
+    if(words[i].length>longestword.length){
+    longestword = words[i];
+    }
+  }
+    return longestword;
+} 
+  
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(numbers) {
+  let finalsum = 0;
+  let allZero = true;
+    if (numbers.length == 0){
+      return finalsum;
+    }
+    else if (numbers.length == 1){
+        finalsum = numbers[0];         //ok
+        return finalsum;
+    }
+    else{
+      for (i=0; i<numbers.length; i++){
+        finalsum += numbers[i];
+      }
+      return finalsum;
+    }
+  }
 
 
 
@@ -26,13 +64,39 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(numbersAvg) {
+  let finalsum = 0;
+  let average;
+  if (numbersAvg.length == 0){ return null;}
+    else if (numbersAvg.length == 1){
+        finalsum = numbersAvg[0];         
+        return finalsum;}
+    else {
+      for (i=0; i<numbersAvg.length; i++){
+        finalsum += numbersAvg[i];
+        
+      }
+      average = (finalsum)/numbersAvg.length;
+      return average;
+    }
+}
 
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(wordsArr) {
+  let sumArr = "";
+  let average = 0;
+  for(let i=0;i<wordsArr.length;i++){
+    sumArr = sumArr + wordsArr[i];
+  }
+  if(wordsArr.length == 0){return null;}
+  else if(wordsArr.length == 1){return wordsArr[0].length;}
+  else {
+    average=sumArr.length/wordsArr.length;
+    return average;}
+ }
 
 // Bonus - Iteration #4.1
 function avg() {}
@@ -128,3 +192,4 @@ if (typeof module !== 'undefined') {
     greatestProduct
   };
 }
+  
